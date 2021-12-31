@@ -1,0 +1,43 @@
+/*Encabezado*/
+
+.navbar{
+    background: black;
+}
+
+.navbar-brand{
+    color: #E0FF00;
+}
+
+.nav-link{
+    color: #E0FF00;
+}
+
+.submenu {
+    position: relative;
+}
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    width: 250px;
+    display: block;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background: #17181b;
+    padding: 10px;
+}
+.button__carrito {
+    padding: 10px;
+    background-color: #E0FF00;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+td {
+    width: 160px;
+}

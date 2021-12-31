@@ -1,0 +1,94 @@
+/*Seccion Productos*/
+
+.seccion__productos{
+    height: 800px;
+}
+
+.img__card {
+    width: 90%;
+    height: 140px;
+}
+
+.img__card-pc {
+    height: 300px;
+}
+
+/*Seccion SHOP y Carrito*/
+
+.titulo__shop {
+    padding-top: 74px;
+}
+
+.shop_titulo {
+    font-size: 60px;
+}
+
+#muestraPedido {
+
+    background-color: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    border-radius: none;
+    width: 100%;
+}
+
+.contenedor-padre {
+    padding: 5px 0;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+    
+#cantProductos {
+    padding: 0px 9px;
+    background-color: #E0FF00;
+    border-radius: 50% ;
+    color: white;
+    position: relative;
+    right: 15px ;
+    font-weight: bold;
+}
+
+.muestra {
+        display: flex;
+        justify-content: center;
+        flex-flow: column-wrap;
+        gap: 10px;
+}
+
+.listaCompras{
+    background-color: rgb(240, 240, 240);
+    width: 90%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 7px;
+    margin-left: 10px;
+}
+
+#listaDeJS {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.resumen{
+    background-color: rgb(240, 240, 240);
+    width: 90%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 7px;
+    margin-right: 10px;
+}
+
+.contenedor-carritoShop {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.boton-carrito {
+    width: 100px;
+    height: 50px;
+}
+
+span {
+    font-size: 20px;
+}

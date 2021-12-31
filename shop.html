@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JR Thechnologies</title>
+
+    <!-- Librerias -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+
+    <!-- CSS + JAVA-->
+    <link rel="stylesheet" href="./css/style.css" />
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO - HEADER -->
+    <header>
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+
+            <div class="container">
+
+                <!-- LOGO -->
+            
+                <a class="navbar-brand fs-2 fw-bold animate__animated animate__rubberBand animate__slow	2s" href=""><i class="bi bi-file-earmark-code"></i> JR Thechnologies</a>
+                
+                <!-- NAV BAR -->
+
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon bg-dark"></span>
+                </button>
+                
+                <!-- LINKS -->
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    
+                    <ul class="navbar-nav justify-content-end w-100">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SHOP</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">ABOUT</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">CONTACT</a>
+                        </li>
+
+                        <li class="submenu">
+                            
+                            <i class="bi bi-cart4 icons m-lg-5 fs-3"></i>
+                            
+                            <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse" >
+                                <table id="lista-carrito" class="table align-middle c-blanco">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Imagen</th>
+                                            <th scope="col">Productos</th>
+                                            <th scope="col">Precio</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody> 
+                                    
+                                </table>
+                                <a href="#" id="vaciar-carrito" onclick="vaciarCarrito()" class="button__carrito d-flex justify-content-center align-items-center m-2">Vaciar Carrito</a>
+                                <a href="#" class="button__carrito d-flex justify-content-center align-items-center m-2">Ver Carrito</a>
+                            </div>
+                            
+                        </li>
+                    
+                    </ul>
+
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- CUERPO -->
+
+    <main class="container">
+
+        <section class="row">
+            
+            <div class="titulo__shop col-12 col-lg-12">   
+
+                <div>
+                    <h2 class="shop_titulo fw-bold text-center c-amarillo mt-4 wow animate__animated animate__fadeIn animate__slower	3s animate__infinite infinite">Lista de Productos</h2>
+                </div>
+    
+                <div>
+                    <p class="text-center">Seleccione uno de nuestros productos</p>
+                </div>
+
+
+
+            </div>
+            
+
+        </section>
+
+        <!-- CARRITO DE COMPRAS -->
+
+        <section>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                <div class="accordion-item">
+
+                    <div class="contenedor-padre accordion-header">
+
+                        <div class="d-flex flex-row justify-content-center align-items-center w-100">
+
+                            <p class="contenedor-carritoShop"><i class="bi bi-cart4 icons m-lg-5 fs-1"></i><span
+                            id="cantProductos" class="c-blanco">0</span></p>
+
+                        </div>
+                        
+                        <i class="bi bi-arrow-down-circle-fill fs-2 c-amarillo mt-3 mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"></i>
+
+                    </div>
+        
+
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        
+                        <div class="accordion-body">
+
+                            <div id="muestra" class="muestra">
+                                <div class="listaCompras">
+            
+                                </div>
+                                <div class="resumen">
+            
+                                </div>
+                            </div>
+
+
+                            <div class="botones d-flex justify-content-center mt-5">
+                                <button id="cancelar_pedido" onclick="vaciarCarrito()" class="boton boton-carrito bg-amarillo">Cancelar Pedido</button>
+                                <button id="procesar-pedido" class="boton boton-carrito bg-amarillo">Procesar Pedido</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seccion Productos -->
+
+        <section>
+
+            <div class="col-12 col-md-12 mx-lg-5">
+
+                <div id=productos__shop class="row">
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!-- Seccion condiciones y formas de pago  -->
+        <section class="seccion__legales row mt-3">
+
+            <div class="col-12 col-lg-12 contenedor__legales d-flex text-center bg-black m-auto">
+
+                <div class="col-6 col-lg-3 d-flex d-flex justify-content-center align-items-center">
+
+                    <div class="col-6 col-lg-3 wow animate__animated animate__heartBeat animate__slow	2s animate__infinite	infinite">
+                        <i class="bi bi-gift-fill icons contenedor_icon"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="c-blanco">
+                            Productos Originales
+                        </h5>
+
+                        <div>
+                            <p class="c-blanco">
+                                Productos 100% originales.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                    
+                <div class="col-6 col-lg-3 d-flex d-flex justify-content-center align-items-center">
+
+                    <div class="col-6 col-lg-3 wow animate__animated animate__heartBeat animate__slow	2s animate__infinite	infinite">
+                        <i class="bi bi-shield-shaded icons contenedor_icon"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="c-blanco">
+                            Productos Asegurados
+                        </h5>
+
+                        <div>
+                            <p class="c-blanco">
+                                Productos totalmente seguros.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+
+                <div class="col-6 col-lg-3 d-flex d-flex justify-content-center align-items-center">        
+                    <div class="col-6 col-lg-3 wow animate__animated animate__heartBeat animate__slow	2s animate__infinite	infinite">
+                        <i class="bi bi-cash-coin icons contenedor_icon"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="c-blanco">
+                            Medios de Pagos
+                        </h5 class="c-blanco">
+
+                        <div>
+                            <p class="c-blanco">
+                                Todas las fomas de pagos.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-lg-3 d-flex justify-content-center align-items-center">
+
+                    <div class="col-6 col-lg-3 wow animate__animated animate__heartBeat animate__slow	2s animate__infinite	infinite">
+                        <i class="bi bi-truck icons contenedor_icon"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="c-blanco">
+                            Facil Envio
+                        </h5>
+
+                        <div>
+                            <p class="c-blanco">
+                                Envio rapido y asegurado.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+        
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de pagina -->
+
+    <footer class="container mt-5 bg-black d-flex flex-row">
+        
+        <div>
+            <!-- LOGO -->
+            <div class="col-12 col-lg-12 d-flex flex-column mx-5">
+                <a class="navbar-brand fs-4 fw-bold wow animate__animated animate__zoomIn animate__delay-1s" href=""><i class="bi bi-file-earmark-code"></i> JR Thechnologies</a>
+            </div>
+
+            <div class="col-12 col-lg-12 d-flex">
+                <div class="col-12 col-lg-3 d-flex flex-column text-center">   
+                
+
+                    <div id="about" class="c-blanco text-center">
+                        <h5 class="about__title">Sobre Nosotros</h5>
+        
+                        <div>
+                            <p class="about__texto">
+                                Somos una empresa de Hardware en Argentina con 15 años de trayectoria. Nos dedicamos a la venta y distribución por mayor y por menor de componentes de PC de alta calidad y reconocidas marcas.
+                            </p>
+                        </div>
+        
+                    </div>
+                </div>
+        
+                <!-- CONTACTO -->
+                <div id="contact" class="col-12 col-lg-3 text-center">
+        
+                    <h2 class="c-blanco contacto__title">Contacto</h2>
+        
+                    <p class="c-blanco contacto__texto">Jonathan Ramovechi © 2021</p>
+        
+                    <p class="c-blanco contacto__texto">JonathanLain.R@HotMail.Com</p>
+                    
+                    <i class="bi bi-whatsapp icons"></i>
+                </div>
+        
+                <!-- Quick LINKS -->
+                <div class="col-12 col-lg-3 text-center">
+
+                    <h2 class="c-blanco quickLinks__title">Quick Links</h2>
+
+                    <ul class="ul__footer text-start">
+                        <li class="footer-item my-1">
+                            <a class="footer-link" href="./index.html">HOME</a>
+                        </li>
+                        
+                        <li class="footer-item my-1">
+                            <a class="footer-link" href="#">SHOP</a>
+                        </li>
+                        
+                        <li class="footer-item my-1">
+                            <a class="footer-link" href="#about">ABOUT</a>
+                        </li>
+                        
+                        <li class="footer-item my-1">
+                            <a class="footer-link" href="#contact">CONTACT</a>
+                        </li>
+
+                    </ul>
+        
+                </div>
+        
+                <!-- REDES SOCIALES  -->
+                <div class="col-12 col-lg-3 text-center">
+
+                    <h2 class="c-blanco redes__title">Redes Sociales</h2>
+
+                    <div class="d-flex flex-column">
+                        <i class="bi bi-instagram icons"></i>
+
+                        <i class="bi bi-facebook icons"></i>
+
+                        <i class="bi bi-twitter icons"></i>
+
+                    </div>
+        
+                </div>
+
+            </div>
+
+        </div>        
+
+    </footer>
+
+    <!-- SCRIPTs -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Animaciones -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="/js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
+    <!-- Archivos JS -->
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

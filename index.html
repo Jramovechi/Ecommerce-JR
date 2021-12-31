@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JR Thechnologies</title>
+
+    <!-- Librerias -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    
+
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS + JAVA-->
+    <link rel="stylesheet" href="./css/style.css">
+    
+
+</head>
+<body>
+
+    <!-- ENCABEZADO - HEADER -->
+    <header>
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+
+            <div class="container">
+
+                <!-- LOGO -->
+            
+                <a class="navbar-brand fs-2 fw-bold animate__animated animate__rubberBand animate__slow	2s" href=""><i class="bi bi-file-earmark-code"></i> JR Thechnologies</a>
+                
+                <!-- NAV BAR -->
+
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    
+                    <span class="navbar-toggler-icon bg-dark"></span>
+                
+                </button>
+                
+                <!-- LINKS -->
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    
+                    <ul class="navbar-nav justify-content-end w-100">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="./shop.html">SHOP</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">ABOUT</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">CONTACT</a>
+                        </li>
+
+                        <li class="submenu">
+                            
+                            <i class="bi bi-cart4 icons m-lg-5 fs-3"></i>
+                            
+                            <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse" >
+                                <table id="lista-carrito" class="table align-middle c-blanco">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Imagen</th>
+                                            <th scope="col">Productos</th>
+                                            <th scope="col">Precio</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody> 
+                                    
+                                </table>
+                                <a href="#" id="vaciar-carrito" onclick="vaciarCarrito()" class="button__carrito d-flex justify-content-center align-items-center m-2">Vaciar Carrito</a>
+                                <a href="#ancla__carrito" class="button__carrito d-flex justify-content-center align-items-center m-2">Ver Carrito</a>
+                            </div>
+                            
+                        </li>
+                    
+                    </ul>
+
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- CUERPO -->
+
+    <main class="container">
+
+        <!-- Seccion Portada -->
+        <section class="row">
+
+            <!-- DIV Contenedor CARRUSEL -->
+            <div class="col-12 col-lg-12">
+
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+
+                            <img class="img-carrusel" src="./imgs/pexels-xxss-is-back-777001.jpg" class="d-block w-100" alt="...">
+
+                            <div class="carousel-caption d-none d-md-block text-center">
+                                <h5 class="c-amarillo fw-bold fs-3">Numero 1° en Ventas</h5>
+                                <p class="c-blanco">Llevamos tu Setup a otro nivel.</p>
+                            </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="img-carrusel" src="./imgs/pexels-john-petalcurin-4317157.jpg" class="d-block w-100" alt="...">
+                            
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            
+                            <h5 class="c-amarillo fw-bold fs-3">Envios a todo el pais</h5>
+                            <p class="c-blanco">Trabajamos con la mejor empresa de Logistica.</p>
+                            
+                        </div>
+                    </div>
+
+                        
+                    <div class="carousel-item">
+                            
+                        <img class="img-carrusel" src="./imgs/pexels-fox-3829227.jpg" class="d-block w-100" alt="...">
+                            
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            
+                            <h5 class="c-amarillo fw-bold fs-3">Productos 100% Originales</h5>
+                            <p class="c-blanco">Traemos lo ultimo en tecnologia.</p>
+                            
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span aria-hidden="true"><i class="bi bi-caret-left-fill border border-3 rounded-circle fs-4 c-amarillo"></i></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span aria-hidden="true"><i class="bi bi-caret-right-fill border border-3 rounded-circle  fs-4 c-amarillo"></i></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Seccion Productos AGREGADOS CON JS -->
+
+        <section class="row">
+                        
+            <div class="col-12 col-md-12 mx-lg-5">
+
+                <div id=productos class="row">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Seccion Banner 2 -->
+
+        <section class="row bg-negro mt-5 mb-3">
+
+            <div class="col-12 col-lg-6 mt-2">
+
+                <img class="banner__img" src="./imgs/alien_ware_aurora_r13.jpeg" alt="">
+
+            </div>
+
+            <div class="col-12 col-lg-6 my-3" >
+                
+                <div class="col-12" >
+                    <h2 class="display-1 fw-bold text-center c-blanco wow animate__animated animate__bounce animate__delay-2s	2s">
+                        Alienware Aurora <span class="c-amarillo">R13</span>
+                    </h2>
+                </div>
+                
+                <div class="col-12 my-3">
+                    <p class="text-center c-blanco">
+                        El Alienware Aurora R13 pone más poder que nunca en manos de los jugadores . Esta PC maximiza el rendimiento de los juegos con la nueva arquitectura híbrida de rendimiento de Intel y la solución de enfriamiento Cryo-tech * personalizada de Alienware.
+                    </p>
+                </div>
+                
+                <div class="col-12 d-flex justify-content-center my-5">
+
+                    <a id="masInfo" class="btn boton bg-amarillo" href="https://www.dell.com/en-us/shop/gaming-and-games/alienware-aurora-r13-gaming-desktop/spd/alienware-aurora-r13-desktop/wdr13aur20h" target="_blank">Más Información</a>
+                
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Seccion Productos 2  AGREGADOS CON JS -->
+
+        <section class="row">
+
+            <div class="col-12 col-md-12">
+
+                <div id=productos2 class="row">
+
+                    <div class="col-12 col-lg-4">
+                        <div class="card justify-content-center align-items-center mt-4 mb-4 p-1 borderShadow">
+                            <img id="modelo__img" src="imgs/producto1.webp"  class="card-img-top img__card" alt="PC Completa I5">
+                            <div class="card-body d-flex flex-column justify-content-center border-top mt-1">
+                                <div>
+                                    <h5 id="modelo__producto10 " class="text-center fw-bold">PC Completa I5</h5>
+                                </div>
+                                <p class="text-center">Precio: <strong id="modelo__precio"> $ 85000</strong></p>
+
+                                <div id="contenedor__info" style="display:none">
+                                    <ul>
+                                        <li>Procesador i5 10400</li>
+                                        <li>Motherboard H410 (Gigabyte, Asus, Msi, Asrock)</li>
+                                        <li>Memoria RAM : 8 GB Hyper Fury </li>
+                                        <li>Fuente 600W</li>
+                                        <li>Refrigeracion x 4</li>
+                                    </ul>
+                                </div>
+
+                                <button id="btnInfo" class="btn boton bg-amarillo">Más INFO+</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <div class="card justify-content-center align-items-center mt-4 mb-4 p-1 borderShadow">
+                            <img id="modelo__img" src="imgs/producto2.webp"  class="card-img-top img__card" alt="PC Completa I7">
+                            <div class="card-body d-flex flex-column justify-content-center border-top mt-1">
+                                <div>
+                                    <h5 id="modelo__producto11 " class="text-center fw-bold">PC Completa I7</h5>
+                                </div>
+                                <p class="text-center">Precio: <strong id="modelo__precio"> $ 115000</strong></p>
+
+                                <div id="contenedor__info1" style="display:none">
+                                    <ul>
+                                        <li>Procesador i7 10400</li>
+                                        <li>Motherboard H410 (Gigabyte, Asus, Msi, Asrock)</li>
+                                        <li>Memoria RAM : 16 GB Hyper Fury </li>
+                                        <li>Fuente 700W</li>
+                                        <li>Refrigeracion x 6</li>
+                                    </ul>
+                                </div>
+
+                                <button id="btnInfo1" class="btn boton bg-amarillo">Más INFO+</button>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <div class="card justify-content-center align-items-center mt-4 mb-4 p-1 borderShadow">
+                            <img id="modelo__img" src="imgs/producto3.webp"  class="card-img-top img__card" alt="PC Completa I9">
+                            <div class="card-body d-flex flex-column justify-content-center border-top mt-1">
+                                <div>
+                                    <h5 id="modelo__producto12 " class="text-center fw-bold">PC Completa I9</h5>
+                                </div>
+                                <p class="text-center">Precio: <strong id="modelo__precio"> $ 200000</strong></p>
+
+                                <div id="contenedor__info2" style="display:none">
+                                    <ul>
+                                        <li>Procesador i9 10400</li>
+                                        <li>Motherboard H410 (Gigabyte, Asus, Msi, Asrock)</li>
+                                        <li>Memoria RAM : 16 GB Hyper Fury</li>
+                                        <li>Fuente 800W</li>
+                                        <li>Refrigeracion:WaterCooling</li>
+                                    </ul>
+                                </div>
+
+                                <button id="btnInfo2" class="btn boton bg-amarillo">Más INFO+</button>  
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Seccion condiciones y formas de pago  -->
+        <section class="seccion__legales row mt-3">
+
+            <div class="col-12 col-lg-12 contenedor__legales d-flex text-center bg-black m-auto">
+
+                <div class="col-6 col-lg-3 d-flex d-flex justify-content-center align-items-center">
+
+                    <div class="col-6 col-lg-3 wow animate__animated animate__heartBeat animate__slow	2s animate__infinite	infinite">
+                        <i class="bi bi-gift-fill icons contenedor_icon"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="c-blanco">
+                            Productos Originales
+                        </h5>
+
+                        <div>
+                            <p class="c-blanco">
+                                Productos 100% originales.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                    
+                <div class="col-6 col-lg-3 d-flex d-flex justify-content-center align-items-center ">
+
+                    <div class="col-6 col-lg-3 wow animate__animated animate__heartBeat animate__slow	2s animate__infinite	infinite">
+                        <i class="bi bi-shield-shaded icons contenedor_icon"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="c-blanco">
+                            Productos Asegurados
+                        </h5>
+
+                        <div>
+                            <p class="c-blanco">
+                                Productos totalmente seguros.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+
+                <div class="col-6 col-lg-3 d-flex d-flex justify-content-center align-items-center ">        
+                    <div class="col-6 col-lg-3 wow animate__animated animate__heartBeat animate__slow	2s animate__infinite	infinite">
+                        <i class="bi bi-cash-coin icons contenedor_icon"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="c-blanco">
+                            Medios de Pagos
+                        </h5 class="c-blanco">
+
+                        <div>
+                            <p class="c-blanco">
+                                Todas las fomas de pagos.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-lg-3 d-flex justify-content-center align-items-center ">
+
+                    <div class="col-6 col-lg-3 wow animate__animated animate__heartBeat animate__slow	2s animate__infinite	infinite">
+                        <i class="bi bi-truck icons contenedor_icon"></i>
+                    </div>
+
+                    <div>
+                        <h5 class="c-blanco">
+                            Facil Envio
+                        </h5>
+
+                        <div>
+                            <p class="c-blanco">
+                                Envio rapido y asegurado.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+        
+            </div>
+
+        </section>
+
+
+        <section class="row">
+            
+            <div id="ancla__carrito" class="titulo__shop col-12 col-lg-12">   
+
+                <div>
+                    <h2 class="shop_titulo fw-bold text-center c-amarillo mt-4 wow animate__animated animate__fadeIn animate__slower	3s animate__infinite infinite">Carrito de Compras</h2>
+                </div>
+    
+                <div>
+                    <p class="text-center">Seleccione uno de nuestros productos</p>
+                </div>
+
+
+
+            </div>
+            
+
+        </section>
+
+        <!-- CARRITO DE COMPRAS -->
+
+        <section>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                <div class="accordion-item">
+
+                    <div class="contenedor-padre accordion-header">
+
+                        <div class="d-flex flex-row justify-content-center align-items-center w-100">
+
+                            <p class="contenedor-carritoShop"><i class="bi bi-cart4 icons m-lg-5 fs-1"></i><span
+                            id="cantProductos" class="c-blanco">0</span></p>
+
+                        </div>
+                        
+                        <i class="bi bi-arrow-down-circle-fill fs-2 c-amarillo mt-3 mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"></i>
+
+                    </div>
+        
+
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        
+                        <div id="slide" class="accordion-body">
+
+                            <div id="muestra" class="muestra">
+                                <div class="listaCompras">
+            
+                                </div>
+                                <div class="resumen">
+            
+                                </div>
+                            </div>
+
+
+                            <div class="botones d-flex justify-content-center mt-5">
+                                <button id="cancelar_pedido" onclick="vaciarCarrito()" class="boton boton-carrito bg-amarillo">Cancelar Pedido</button>
+                                <button id="procesar-pedido" class="boton boton-carrito bg-amarillo">Procesar Pedido</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de pagina -->
+
+    <footer class="container mt-5 bg-black d-flex flex-row">
+        
+        <div>
+            <!-- LOGO -->
+            <div class="col-12 col-lg-12 d-flex flex-column mx-5">
+                <a class="navbar-brand fs-4 fw-bold wow animate__animated animate__zoomIn animate__delay-1s" href=""><i class="bi bi-file-earmark-code"></i> JR Thechnologies</a>
+            </div>
+
+            <div class="col-12 col-lg-12 d-flex">
+                <div class="col-12 col-lg-3 d-flex flex-column text-center">   
+                
+
+                    <div id="about" class="c-blanco text-center">
+                        <h5 class="about__title">Sobre Nosotros</h5>
+        
+                        <div>
+                            <p class="about__texto">
+                                Somos una empresa de Hardware en Argentina con 15 años de trayectoria. Nos dedicamos a la venta y distribución por mayor y por menor de componentes de PC de alta calidad y reconocidas marcas.
+                            </p>
+                        </div>
+        
+                    </div>
+                </div>
+        
+                <!-- CONTACTO -->
+                <div id="contact" class="col-12 col-lg-3 text-center">
+        
+                    <h2 class="c-blanco contacto__title">Contacto</h2>
+        
+                    <p class="c-blanco contacto__texto">Jonathan Ramovechi © 2021</p>
+        
+                    <p class="c-blanco contacto__texto">JonathanLain.R@HotMail.Com</p>
+                    
+                    <i class="bi bi-whatsapp icons"></i>
+                </div>
+        
+                <!-- Quick LINKS -->
+                <div class="col-12 col-lg-3 text-center">
+
+                    <h2 class="c-blanco quickLinks__title">Quick Links</h2>
+
+                    <ul class="ul__footer text-start">
+                        <li class="footer-item my-1">
+                            <a class="footer-link" href="#carouselExampleCaptions">HOME</a>
+                        </li>
+                        
+                        <li class="footer-item my-1">
+                            <a class="footer-link" href="./shop.html">SHOP</a>
+                        </li>
+                        
+                        <li class="footer-item my-1">
+                            <a class="footer-link" href="#about">ABOUT</a>
+                        </li>
+                        
+                        <li class="footer-item my-1">
+                            <a class="footer-link" href="#contact">CONTACT</a>
+                        </li>
+
+                    </ul>
+        
+                </div>
+        
+                <!-- REDES SOCIALES  -->
+                <div class="col-12 col-lg-3 text-center">
+
+                    <h2 class="c-blanco redes__title">Redes Sociales</h2>
+
+                    <div class="d-flex flex-column">
+                        <i class="bi bi-instagram icons"></i>
+
+                        <i class="bi bi-facebook icons"></i>
+
+                        <i class="bi bi-twitter icons"></i>
+
+                    </div>
+        
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- SCRIPTs -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Animaciones -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="/js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    
+    <!-- Archivos JS -->
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

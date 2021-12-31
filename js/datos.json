@@ -1,0 +1,13 @@
+[   {"id":1, "imagen":"procesador-i5.webp", "modelo":"Procesador I5", "precio":10000 },
+    {"id":2, "imagen":"procesador-i7.webp", "modelo":"Procesador I7", "precio":15000 },
+    {"id":3, "imagen":"procesador-i9.webp", "modelo":"Procesador I9", "precio":20000 },
+    {"id":4, "imagen":"motherboard-i5.webp", "modelo":"MotherBoard I5", "precio":8000 },
+    {"id":5, "imagen":"motherboard-i7-2.webp", "modelo":"MotherBoard I7", "precio":11000 },
+    {"id":6, "imagen":"motherboard-i9.webp", "modelo":"MotherBoard I9", "precio":18000 },
+    {"id":7, "imagen":"gabinete-1.webp", "modelo":"Gabinete Sentey1", "precio":4500 },
+    {"id":8, "imagen":"gabinete-2.webp", "modelo":"Gabinete Sentey2", "precio":5000 },
+    {"id":9, "imagen":"gabinete-3.webp", "modelo":"Gabinete Sentey3", "precio":8000 },
+    {"id":10, "imagen":"producto1.webp", "modelo":"PC Completa I5", "precio":85000 },
+    {"id":11, "imagen":"producto2.webp", "modelo":"PC Completa I7", "precio":115000 },
+    {"id":12, "imagen":"producto3.webp", "modelo":"PC Completa 9", "precio":200000 }
+]

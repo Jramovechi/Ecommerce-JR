@@ -1,0 +1,19 @@
+
+@import "colores";
+@import "componentes";
+@import "./secciones/header";
+@import "./secciones/productos";
+@import "./secciones/footer";
+@import "./secciones/seccion-portada";
+@import "./secciones/seccion-banner";
+@import "./secciones/seccion-medios";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+

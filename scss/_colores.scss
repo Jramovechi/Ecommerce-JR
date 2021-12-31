@@ -1,0 +1,31 @@
+
+$amarillo:#E0FF00;
+$blanco:white;
+$negro:black;
+$negroClaro: #343a40;
+
+/* Colores */
+.c-amarillo{
+    color: $amarillo;
+}
+
+.c-blanco{
+    color: $blanco;
+}
+.c-negro{
+    color: $negro;
+}
+.bg-amarillo{
+    background-color: $amarillo;
+}
+
+.bg-negro{
+    background-color: $negro;
+}
+.bg-blanco{
+    background-color: $blanco;
+}
+
+.bg-negroClaro{
+    background-color: $negroClaro;
+}
